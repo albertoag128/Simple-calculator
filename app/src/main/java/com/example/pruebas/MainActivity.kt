@@ -103,8 +103,12 @@ class MainActivity : AppCompatActivity() {
              }else{
                  var num1 = numero1.text.toString().toDouble()
                  var num2 = numero2.text.toString().toDouble()
-                 resultado.text = ((division(num1, num2).toBigDecimal().setScale(3, RoundingMode.HALF_UP).toDouble()).toString())
-                 error.setText("")
+                 if(num2==0.0){
+                     error.setText("Cualquier número entre 0 es infinito")
+                 }else{
+                     resultado.text = ((division(num1, num2).toBigDecimal().setScale(3, RoundingMode.HALF_UP).toDouble()).toString())
+                     error.setText("")
+                 }
              }
          }
 
