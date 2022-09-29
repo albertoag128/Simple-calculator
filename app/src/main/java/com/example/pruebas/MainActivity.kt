@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
             }else{
                 var num1 = numero1.text.toString().toDouble()
                 var num2 = numero2.text.toString().toDouble()
-                resultado.text = (suma(num1, num2)).toString()
+                resultado.text = ((suma(num1, num2).toBigDecimal().setScale(3, RoundingMode.HALF_UP).toDouble()).toString())
                 error.setText("")
             }
 
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
              }else{
                  var num1 = numero1.text.toString().toDouble()
                  var num2 = numero2.text.toString().toDouble()
-                 resultado.text = (resta(num1, num2)).toString()
+                 resultado.text = ((resta(num1, num2).toBigDecimal().setScale(3, RoundingMode.HALF_UP).toDouble()).toString())
                  error.setText("")
              }
          }
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
              }else{
                  var num1 = numero1.text.toString().toDouble()
                  var num2 = numero2.text.toString().toDouble()
-                 resultado.text = (multiplicacion(num1, num2)).toString()
+                 resultado.text = ((multiplicacion(num1, num2).toBigDecimal().setScale(3, RoundingMode.HALF_UP).toDouble()).toString())
                  error.setText("")
              }
          }
