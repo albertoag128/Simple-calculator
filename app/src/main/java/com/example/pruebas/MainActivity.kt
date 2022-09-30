@@ -119,6 +119,7 @@ class MainActivity : AppCompatActivity() {
              numero2.setText("")
 
              resultado.text = ""
+             error.text=""
          }
     }
 }
